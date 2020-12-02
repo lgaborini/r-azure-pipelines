@@ -49,7 +49,7 @@ jobs:
       CI: true
       ${{ insert }}: ${{ parameters.env }}
     pool:
-      vmImage: 'vs2017-win2016'
+      vmImage: 'VS2017'
     steps:
       - template: templates/r-setup-windows.yml
       - template: templates/pkg-workflow.yml
