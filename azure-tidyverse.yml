@@ -27,21 +27,6 @@ jobs:
         parameters:
           coverage: false
 
-
-  - job: 'macOS'
-    variables:
-      CRAN: ${{parameters.CRAN}}
-      R_LIBS_USER: ${{parameters.R_LIBS_USER}}
-      CI: true
-      ${{ insert }}: ${{ parameters.env }}
-    pool:
-      vmImage: 'macOS-10.15'
-    steps:
-      - template: templates/r-setup-macOS.yml
-      - template: templates/pkg-workflow.yml
-        parameters:
-          coverage: ${{parameters.coverage}}
-
   - job: 'Windows'
     variables:
       CRAN: ${{parameters.CRAN}}
