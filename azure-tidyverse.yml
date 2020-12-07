@@ -13,7 +13,7 @@ jobs:
       CI: true
       ${{ insert }}: ${{ parameters.env }}
     pool:
-      name: 'Ubuntu'
+      vmImage: 'Ubuntu-20.04'
     strategy:
       matrix:
         R-release:
@@ -34,7 +34,7 @@ jobs:
       CI: true
       ${{ insert }}: ${{ parameters.env }}
     pool:
-      name: 'VS2017'
+      vmImage: 'VS2017'
     steps:
       - template: templates/r-setup-windows.yml
       - template: templates/pkg-workflow.yml
