@@ -18,8 +18,10 @@ jobs:
       matrix:
         R-release:
           containerImage: rstudio/r-base:focal
+        R-release-4.0:
+          containerImage: rstudio/r-base:4.0-focal
         R-dev:
-          containerImage: rstudio/r-devel:focal
+          containerImage: rstudio/r-base:devel-focal
     container: $[ variables['containerImage'] ]
     steps:
       - template: templates/r-setup-linux.yml
