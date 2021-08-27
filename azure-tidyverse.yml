@@ -16,11 +16,13 @@ jobs:
       vmImage: 'Ubuntu-20.04'
     strategy:
       matrix:
-        R-release:
-          containerImage: rstudio/r-base:focal
+        R-release-3.6:
+          containerImage: rstudio/r-base:3.6-focal
         R-release-4.0:
           containerImage: rstudio/r-base:4.0-focal
-        R-dev:
+        R-release-4.1:
+          containerImage: rstudio/r-base:4.1-focal
+        R-devel:
           containerImage: rstudio/r-base:devel-focal
     container: $[ variables['containerImage'] ]
     steps:
