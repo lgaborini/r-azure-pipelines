@@ -11,16 +11,20 @@ as well as a simple R package for testing.
 ### Features
 
 - Uses [RStudio docker](https://github.com/rstudio/r-docker) containers to test
-  on R 3.6, 4.0, 4.1, devel
+  on R 3.6, 4.0, 4.1, 4.2, R-devel
 - Installs package dependencies using [remotes](https://remotes.r-lib.org)
 - Build and checks packages using [rcmdcheck](https://github.com/r-lib/rcmdcheck)
 - Run code coverage using [covr](https://github.com/r-lib/covr)
 
 - Linux
+
   - Matrix builds of minor R versions from 3.2+
   - Package caching
+- 
 - Windows
+
   - RTools installation
+  
 - macOS
 
 ### Setup
