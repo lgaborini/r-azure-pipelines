@@ -24,8 +24,8 @@ jobs:
           containerImage: rstudio/r-base:4.1-focal
         R-release-4.2:
           containerImage: rstudio/r-base:4.2-focal
-        R-devel:
-          containerImage: rstudio/r-base:devel-focal
+        # R-devel:
+        #   containerImage: rstudio/r-base:devel-focal
     container: $[ variables['containerImage'] ]
     steps:
       - template: templates/r-setup-linux.yml
